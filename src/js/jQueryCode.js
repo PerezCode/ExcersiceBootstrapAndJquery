@@ -58,6 +58,13 @@ $(() => {
         <td>${studentData[4]}</td>
         <td>${studentData[5]}</td>
       </tr>`);
+
+      // Colorear si gana o pierde
+      if(studentData[studentData.length - 1] >= 3.5){
+        $("tbody tr:last-child").addClass("gana");
+      } else {
+        $("tbody tr:last-child").addClass("pierde");
+      }
     }
   }
 
