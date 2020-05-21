@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Notes</title>
 </head>
 <body>
@@ -26,41 +27,50 @@
             <input class="form-control" type="number" name="cedula" id="cedula">
           </div>
           <div class="form-group">
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <input class="form-control" type="date" name="fechaNacimiento" id="cedula">
+          </div>
+          <div class="form-group">
             <label for="#">Notas</label>
-            <input
-              class="form-control"
-              step = "0.1"
-              min = "0"
-              max = "5"
-              type="number"
-              name="nota"
-              placeholder="Nota 1"
-            >
-            <input
-              class="form-control my-2"
-              step = "0.1"
-              min = "0"
-              max = "5"
-              type="number"
-              name="nota"
-              placeholder="Nota 2"
-            >
-            <input
-              class="form-control"
-              step = "0.1"
-              max = "5"
-              min = "0"
-              type="number"
-              name="nota"
-              placeholder="Nota 3"
-            >
+            <div class="d-flex justify-content-between">
+              <input
+                id="nota1"
+                class="form-control"
+                step = "0.1"
+                min = "0"
+                max = "5"
+                type="number"
+                name="nota"
+                placeholder="Nota 1"
+              >
+              <input
+                id="nota2"
+                class="form-control"
+                step = "0.1"
+                min = "0"
+                max = "5"
+                type="number"
+                name="nota"
+                placeholder="Nota 2"
+              >
+              <input
+                id="nota3"
+                class="form-control"
+                step = "0.1"
+                max = "5"
+                min = "0"
+                type="number"
+                name="nota"
+                placeholder="Nota 3"
+              >
+            </div>
           </div>
           <input class="btn btn-success w-100" type="submit" value="Guardar">
         </form>
       </div>
       <div class="col-8 table">
-        <table class="table table-striped table-dark">
-          <thead class="thead-dark">
+        <table class="table border">
+          <thead>
             <tr>
               <th>Cédula</th>
               <th>Nombre</th>
@@ -71,14 +81,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>123476222</td>
-              <td>David Perez</td>
-              <td>4.3</td>
-              <td>4.2</td>
-              <td>3.2</td>
-              <td>3.9</td>
-            </tr>
           </tbody>
         </table>
       </div>
