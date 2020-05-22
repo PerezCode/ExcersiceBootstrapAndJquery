@@ -14,12 +14,14 @@
     <div class="row">
       <!-- Aside -->
       <section class="col-2 Aside">
-        <img src="./images/logo-polijic.png" alt="Logo Poli JIC">
-        <div class="Aside__Section Aside__Section--Active">
+        <a href="https://www.politecnicojic.edu.co/" target="_blank">
+          <img src="./images/logo-polijic.png" alt="Logo Poli JIC">
+        </a>
+        <div class="Aside__Section Aside__Section--Active" id="EstudiantesSection">
           <i class="far fa-user"></i>
           <p class="Aside__Students">Estudiantes</p>
         </div>
-        <div class="Aside__Section">
+        <div class="Aside__Section" id="ProfesoresSection">
           <i class="far fa-user"></i>
           <p class="Aside__Teachers">Profesores</p>
         </div>
@@ -27,7 +29,7 @@
       <!-- Aside End -->
       <!-- Content -->
       <section class="col-10 Content">
-        <div class="row mt-4">
+        <div class="row mt-4 FormAndTable">
           <div class="col-4">
             <div class="Content__Form">
               <form class="p-4" >
@@ -100,6 +102,26 @@
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <div class="MejorEstudianteTitle mb-2">
+              <i class="fas fa-star Star"></i>
+              <h4 class="m-0">Estudiante con el mejor promedio</h4>
+            </div>
+            <table class="table border" id="BestAverage">
+              <tr><td>No hay estudiantes registrados</td></tr>
+            </table>
+            <div class="PeorEstudianteTitle mb-2">
+              <i class="fas fa-bug Bug"></i>
+              <h4 class="m-0">El peor estudiante</h4>
+            </div>
+            <table class="table border" id="WorstAverage">
+              <tbody>
+                <tr><td>No hay estudiantes registrados</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
