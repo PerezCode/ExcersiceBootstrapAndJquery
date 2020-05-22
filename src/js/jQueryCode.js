@@ -61,8 +61,10 @@ $(() => {
       // Colorear si gana o pierde
       if(studentData[studentData.length - 1] >= 3.5){
         $("tbody tr:last-child").addClass("gana");
-      } else {
+      } else if(studentData[studentData.length - 1] < 3) {
         $("tbody tr:last-child").addClass("pierde");
+      } else {
+        $("tbody tr:last-child").addClass("neutro");
       }
     }
   }

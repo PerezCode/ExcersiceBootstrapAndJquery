@@ -78,3 +78,8 @@ html, body {
   background-color: #dc3545;
   color: white;
 }
+
+.neutro {
+  background-color: white;
+  color: black;
+}
