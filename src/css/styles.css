@@ -59,6 +59,10 @@ html, body {
   transition: 1s;
 }
 
+input[type="submit"] {
+  background-color: #2ecc71;
+}
+
 .Content__Table {
   height: 100%;
   overflow: scroll;

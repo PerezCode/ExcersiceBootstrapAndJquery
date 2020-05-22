@@ -48,7 +48,7 @@ $(() => {
 
     // Validando la inexistencia de errores para agregar en la tabla
     if(!errorNombre && !errorCedula && !errorNotas){
-      $("tbody").append(`
+      $("#CompleteList").append(`
       <tr>
         <td>${studentData[0]}</td>
         <td>${studentData[1]}</td>
