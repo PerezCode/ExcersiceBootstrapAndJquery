@@ -50,7 +50,6 @@ $(() => {
     if(!errorNombre && !errorCedula && !errorNotas){
       $("tbody").append(`
       <tr>
-        <td>${studentData[2]}</td>
         <td>${studentData[0]}</td>
         <td>${studentData[1]}</td>
         <td>${studentData[2]}</td>

@@ -4,86 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8d4fd87ee4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <title>Notes</title>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col d-flex justify-content-center">
-        <h1>Notas De Estudiantes</h1>
-      </div>
-    </div>
-    <div class="row section">
-      <div class="col-4">
-        <form class="border border-success rounded-lg p-4" >
-          <h2>Formulario</h2>
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input class="form-control" type="text" name="nombre" id="nombre">
-          </div>
-          <div class="form-group">
-            <label for="cedula">Cédula</label>
-            <input class="form-control" type="number" name="cedula" id="cedula">
-          </div>
-          <div class="form-group">
-            <label for="fechaNacimiento">Fecha de nacimiento</label>
-            <input class="form-control" type="date" name="fechaNacimiento" id="cedula">
-          </div>
-          <div class="form-group">
-            <label for="#">Notas</label>
-            <div class="d-flex justify-content-between">
-              <input
-                id="nota1"
-                class="form-control"
-                step = "0.1"
-                min = "0"
-                max = "5"
-                type="number"
-                name="nota"
-                placeholder="Nota 1"
-              >
-              <input
-                id="nota2"
-                class="form-control"
-                step = "0.1"
-                min = "0"
-                max = "5"
-                type="number"
-                name="nota"
-                placeholder="Nota 2"
-              >
-              <input
-                id="nota3"
-                class="form-control"
-                step = "0.1"
-                max = "5"
-                min = "0"
-                type="number"
-                name="nota"
-                placeholder="Nota 3"
-              >
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <!-- Aside -->
+      <section class="col-2 Aside">
+        <img src="./images/logo-polijic.png" alt="Logo Poli JIC">
+        <div class="Aside__Section Aside__Section--Active">
+          <i class="far fa-user"></i>
+          <p class="Aside__Students">Estudiantes</p>
+        </div>
+        <div class="Aside__Section">
+          <i class="far fa-user"></i>
+          <p class="Aside__Teachers">Profesores</p>
+        </div>
+      </section>
+      <!-- Aside End -->
+      <!-- Content -->
+      <section class="col-10 Content">
+        <div class="row mt-4">
+          <div class="col-4">
+            <div class="Content__Form">
+              <form class="p-4" >
+                <h2>Agregar Estudiante</h2>
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input class="form-control form-control-sm" type="text" name="nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                  <label for="cedula">Cédula</label>
+                  <input class="form-control form-control-sm" type="number" name="cedula" id="cedula">
+                </div>
+                <div class="form-group">
+                  <label for="fechaNacimiento">Fecha de nacimiento</label>
+                  <input class="form-control form-control-sm" type="date" name="fechaNacimiento" id="cedula">
+                </div>
+                <div class="form-group">
+                  <label for="#">Notas</label>
+                  <div class="d-flex justify-content-between">
+                    <input
+                      id="nota1"
+                      class="form-control form-control-sm"
+                      step = "0.1"
+                      min = "0"
+                      max = "5"
+                      type="number"
+                      name="nota"
+                      placeholder="Nota 1"
+                    >
+                    <input
+                      id="nota2"
+                      class="form-control form-control-sm mx-1"
+                      step = "0.1"
+                      min = "0"
+                      max = "5"
+                      type="number"
+                      name="nota"
+                      placeholder="Nota 2"
+                    >
+                    <input
+                      id="nota3"
+                      class="form-control form-control-sm"
+                      step = "0.1"
+                      max = "5"
+                      min = "0"
+                      type="number"
+                      name="nota"
+                      placeholder="Nota 3"
+                    >
+                  </div>
+                </div>
+                <input class="btn btn-success w-100" type="submit" value="Guardar">
+              </form>
             </div>
           </div>
-          <input class="btn btn-success w-100" type="submit" value="Guardar">
-        </form>
-      </div>
-      <div class="col-8 table">
-        <table class="table border">
-          <thead>
-            <tr>
-              <th>Cédula</th>
-              <th>Nombre</th>
-              <th>Nota 1</th>
-              <th>Nota 2</th>
-              <th>Nota 3</th>
-              <th>Promedio</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
+          <div class="col-8">
+            <div class="Content__Table">
+              <table class="table border">
+                <thead>
+                  <tr>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Promedio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Content End -->
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
